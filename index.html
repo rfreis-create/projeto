@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulação de Financiamento</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #111;
+}
+
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2') center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  max-width: 600px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 15px 25px;
+  background: linear-gradient(90deg,#ff7a00,#ff2d2d);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.form {
+  background: #0b1a2e;
+  color: white;
+  padding: 40px 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+}
+
+.footer {
+  background: #0b1a2e;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Descubra qual carro você pode comprar com sua renda</h1>
+  <p>Em menos de 30 segundos veja quanto pode financiar</p>
+  <a href="#form" class="btn">Fazer simulação gratuita</a>
+</div>
+
+<div class="section">
+  <h2>Por que fazer a simulação?</h2>
+
+  <div class="card">
+    <h3>💰 Quanto o banco libera</h3>
+    <p>Saiba quanto você pode financiar</p>
+  </div>
+
+  <div class="card">
+    <h3>📅 Valor da parcela</h3>
+    <p>Veja quanto vai pagar por mês</p>
+  </div>
+
+  <div class="card">
+    <h3>📍 Carros na sua região</h3>
+    <p>Opções disponíveis perto de você</p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>O que dizem nossos clientes</h2>
+
+  <div class="card">
+    <p>"Descobri que podia financiar um carro melhor."</p>
+    <strong>Carlos - Campinas</strong>
+  </div>
+
+  <div class="card">
+    <p>"Recebi opções no mesmo dia."</p>
+    <strong>Juliana - SP</strong>
+  </div>
+</div>
+
+<div id="form" class="form">
+  <h2>Faça sua simulação</h2>
+
+  <form onsubmit="sendLead(event)">
+    <input placeholder="Quanto pode pagar por mês" required>
+    <input placeholder="Sua renda mensal" required>
+    <input placeholder="Cidade" required>
+    <input placeholder="WhatsApp" required>
+
+    <button class="btn">Ver resultado</button>
+  </form>
+</div>
+
+<div class="footer">
+  <p>Simulação gratuita e sem compromisso</p>
+</div>
+
+<script>
+function sendLead(e){
+  e.preventDefault();
+  alert("Lead capturado! (agora conectamos no WhatsApp depois)");
+}
+</script>
+
+</body>
+</html>
